@@ -272,9 +272,9 @@ sample.
 The question is what to do with these predicted values? As you can see,
 we have predicted probability of move `P_move`, but an examiner either
 moves or doesn’t. How do we deal with that? One way is to set a
-threshold for this binary prediction. If *P*(*m**o**v**e*) is higher
-than that threshold, we’ll count this prediction as predicting a move.
-If it’s lower, we’ll count such prediction as no move.
+threshold for this binary prediction. If Pr(move) is higher than that
+threshold, we’ll count this prediction as predicting a move. If it’s
+lower, we’ll count such prediction as no move.
 
 But where so set this threshold? The distribution of `P_move` is
 continuous and it’s not obvious where to cut it:
