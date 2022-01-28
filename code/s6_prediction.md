@@ -279,6 +279,11 @@ lower, we’ll count such prediction as no move.
 But where so set this threshold? The distribution of `P_move` is
 continuous and it’s not obvious where to cut it:
 
+``` r
+g <- ggplot(data = test_sample, mapping = aes(x = P_move))
+g + geom_histogram(orientation = "")
+```
+
     ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 
     ## Warning: Removed 577 rows containing non-finite values (stat_bin).
@@ -458,6 +463,16 @@ roc_data
     ## 3 0.0113 0.0216
     ## 4 0      0     
     ## 5 1      1
+
+``` r
+g <- ggplot(roc_data, aes(x = FPR, y= TPR))
+
+g + geom_point() +
+  geom_smooth() +
+  geom_abline(intercept = 0) +
+  xlim(0,1)+
+  ylim(0,1)
+```
 
     ## `geom_smooth()` using method = 'loess' and formula 'y ~ x'
 

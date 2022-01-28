@@ -248,7 +248,7 @@ The question is what to do with these predicted values? As you can see, we have 
 
 But where so set this threshold? The distribution of `P_move` is continuous and it's not obvious where to cut it:
 
-```{r pressure, echo=FALSE}
+```{r pressure, warnings=FALSE}
 g <- ggplot(data = test_sample, mapping = aes(x = P_move))
 g + geom_histogram(orientation = "")
 ```
@@ -369,7 +369,7 @@ roc_data <- gof_tr1 %>%
 roc_data
 ```
 
-```{r, echo=FALSE, warning=FALSE}
+```{r, echo=TRUE, warning=FALSE}
 g <- ggplot(roc_data, aes(x = FPR, y= TPR))
 
 g + geom_point() +
