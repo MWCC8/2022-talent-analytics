@@ -248,7 +248,7 @@ The question is what to do with these predicted values? As you can see, we have 
 
 But where so set this threshold? The distribution of `P_move` is continuous and it's not obvious where to cut it:
 
-```{r pressure, warnings=FALSE}
+```{r hist, warning=FALSE}
 g <- ggplot(data = test_sample, mapping = aes(x = P_move))
 g + geom_histogram(orientation = "")
 ```

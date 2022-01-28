@@ -286,9 +286,7 @@ g + geom_histogram(orientation = "")
 
     ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 
-    ## Warning: Removed 577 rows containing non-finite values (stat_bin).
-
-![](s6_prediction_files/figure-gfm/pressure-1.png)<!-- -->
+![](s6_prediction_files/figure-gfm/hist-1.png)<!-- -->
 
 We’ll use **sensitivity** (True Positive Rate, TPR) and its inverse
 (False Positive Rate, FPR) to see how various thresholds are affecting
