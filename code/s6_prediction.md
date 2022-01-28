@@ -298,23 +298,23 @@ tr1 <- 0.7
 
 test_sample <- test_sample %>% 
   mutate(pr_moved_tr1 = if_else(P_move>tr1,1,0))
-est_sample
+test_sample
 ```
 
-    ## # A tibble: 9,652 x 6
-    ##    old_pid first_au first_tc has_moved woman tenure
-    ##      <dbl>    <dbl>    <dbl>     <dbl> <dbl>  <dbl>
-    ##  1   15627     2155     2100         1    NA  NA   
-    ##  2   14581     2616     2600         0     0  16.3 
-    ##  3    2860     4128     4100         1     0   4.56
-    ##  4    5286     4128     4100         1     0   7.82
-    ##  5    1877     2187     2100         0     0  17.2 
-    ##  6    2262     1626     1600         1     0   9.51
-    ##  7    6267     1634     1600         0     1  17.2 
-    ##  8    8982     4178     4100         1     1   9.24
-    ##  9   13767     1654     1600         0     1   4.10
-    ## 10    7365     2834     2800         0     0  27.5 
-    ## # … with 9,642 more rows
+    ## # A tibble: 3,218 x 8
+    ##    old_pid first_au first_tc has_moved woman tenure P_move pr_moved_tr1
+    ##      <dbl>    <dbl>    <dbl>     <dbl> <dbl>  <dbl>  <dbl>        <dbl>
+    ##  1      21     4135     4100         1     0   4.22  0.730            1
+    ##  2      22     2838     2800         1     0   8.09  0.698            0
+    ##  3      26     3739     3700         1     0  14.2   0.648            0
+    ##  4      30     3735     3700         0     0   9.78  0.684            0
+    ##  5      37     4131     4100         1     0   8.13  0.698            0
+    ##  6      41     2625     2600         1     0  14.2   0.648            0
+    ##  7      44     2876     2800         1     0  10.6   0.678            0
+    ##  8      50     3679     3600         0     0  16.9   0.626            0
+    ##  9      51     3714     3700         0     0  14.8   0.643            0
+    ## 10      55     3714     3700         0     0  11.0   0.674            0
+    ## # … with 3,208 more rows
 
 Let’s calculate TPR and FPR based on true/false positives and true/false
 negatives.

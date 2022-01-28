@@ -262,7 +262,7 @@ tr1 <- 0.7
 
 test_sample <- test_sample %>% 
   mutate(pr_moved_tr1 = if_else(P_move>tr1,1,0))
-est_sample
+test_sample
 ```
 
 Let's calculate TPR and FPR based on true/false positives and true/false negatives. 
